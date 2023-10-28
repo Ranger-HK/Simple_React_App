@@ -8,6 +8,16 @@ import {withStyles} from "@mui/styles";
 class LoginPage extends Component{
     constructor(props){
         super(props)
+        this.state ={
+            userName:"admin",
+            password:"1234"
+        }
+    }
+
+    checkValidity(){
+        console.log("Login Click")
+        console.log("userName"+this.state.userName)
+        console.log("password"+this.state.password)
     }
 
     render(){
@@ -40,7 +50,14 @@ class LoginPage extends Component{
                     </div >
 
                     <div className={classes.container_button}>
-                        <Button variant="contained">LOGIN</Button>
+                        <Button
+                            variant="contained"
+                            onClick={() =>{
+                                console.log("Clicked")
+                                this.checkValidity()
+                            }}
+
+                        >LOGIN</Button>
 
                     </div>
                 </div>
