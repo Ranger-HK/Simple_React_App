@@ -40,7 +40,7 @@ class GDSEButton extends Component {
 
         if (disabled) return;
 
-        onClick && onClick({ event });
+        onclick && onclick({ event });
     }
 
 

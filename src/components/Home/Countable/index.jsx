@@ -2,6 +2,7 @@ import {Component} from "react";
 import {Button, Typography} from "@mui/material";
 import {styleSheets} from "../Countable/styles";
 import {withStyles} from "@mui/styles";
+import GDSEButton from "../../Common/Button";
 
 
 
@@ -43,12 +44,20 @@ class Countable extends Component{
                 </div>
                 <div>
 
-                    <Button variant="contained"
+                    {/* <Button variant="contained"
                      onClick={() =>{
                          this.incrementCount();
                      }}
                             style={{backgroundColor:"Green"}}
-                    >Increase</Button>
+                    >Increase</Button> */}
+
+                    <GDSEButton
+                        label="Increase !"
+                        variant="contained"
+                        onClick={() =>{
+                            this.incrementCount();
+                        }}
+                    />
 
                     <Button variant="contained"
                             onClick={() =>{
