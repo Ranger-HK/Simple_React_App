@@ -9,8 +9,8 @@ class LoginPage extends Component{
     constructor(props){
         super(props)
         this.state ={
-            userName:"admin",
-            password:"1234"
+            userName:"ravindu",
+            password:"1999"
         }
     }
 
@@ -31,7 +31,6 @@ class LoginPage extends Component{
                         Login
                     </Typography>
                     </div>
-
                     <div className={classes.container_field}>
                         <TextField
                             id="outlined-basic"
