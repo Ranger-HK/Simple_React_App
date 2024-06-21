@@ -1,41 +1,54 @@
-import {Component} from "react";
-import {Button, Typography} from "@mui/material";
+import { Component } from "react";
+import { Button, Typography } from "@mui/material";
 import TextField from '@mui/material/TextField';
-import {styleSheets} from "../Login/styles";
-import {withStyles} from "@mui/styles";
+import { styleSheets } from "../Login/styles";
+import { withStyles } from "@mui/styles";
 
 
-class LoginPage extends Component{
-    constructor(props){
+class LoginPage extends Component {
+    constructor(props) {
         super(props)
-        this.state ={
-            userName:"ravindu",
-            password:"1999"
+        this.state = {
+            userName: "ravindu",
+            password: "1999",
+            formData: {
+                user_name: '',
+                password: ''
+            }
         }
     }
 
-    checkValidity(){
+    checkValidity() {
         console.log("Login Click")
-        console.log("userName"+this.state.userName)
-        console.log("password"+this.state.password)
+        console.log("UserName : " + this.state.userName)
+        console.log("Password : " + this.state.password)
+        console.log(this.state.formData)
     }
 
-    render(){
-        const {classes} = this.props
-        return(
+    render() {
+        const { classes } = this.props
+        return (
             <div className={classes.container} >
                 <div className={classes.container_sub} >
 
-                    <div  className={classes.container_title}>
-                    <Typography variant="h3" gutterBottom>
-                        Login
-                    </Typography>
+                    <div className={classes.container_title}>
+                        <Typography variant="h3" gutterBottom>
+                            Login
+                        </Typography>
                     </div>
+
+
                     <div className={classes.container_field}>
                         <TextField
                             id="outlined-basic"
                             label="User Name"
                             variant="outlined"
+                            onChange={(e) => {
+                                console.log(e.target.value)
+                                let formData = this.state.formData
+                                formData.user_name = e.target.value
+                                this.setState({ formData })
+                            }}
 
                         />
 
@@ -44,6 +57,12 @@ class LoginPage extends Component{
                             label="Password"
                             type={"password"}
                             variant="outlined"
+                            onChange={(e) => {
+                                console.log(e.target.value)
+                                let formData = this.state.formData
+                                formData.password = e.target.value
+                                this.setState({ formData })
+                            }}
 
                         />
                     </div >
@@ -51,7 +70,7 @@ class LoginPage extends Component{
                     <div className={classes.container_button}>
                         <Button
                             variant="contained"
-                            onClick={() =>{
+                            onClick={() => {
                                 console.log("Clicked")
                                 this.checkValidity()
                             }}
