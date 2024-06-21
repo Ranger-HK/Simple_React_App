@@ -89,6 +89,8 @@ class LoginPage extends Component {
                         >LOGIN</Button>
 
                     </div>
+
+                    
                 </div>
             </div>
 
