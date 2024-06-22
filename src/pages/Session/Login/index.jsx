@@ -3,7 +3,7 @@ import { Button, Typography } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import { styleSheets } from "../Login/styles";
 import { withStyles } from "@mui/styles";
-import GDSESnackBar from "../../components/Common/SnackBar";
+import GDSESnackBar from "../../../components/Common/SnackBar";
 
 
 
