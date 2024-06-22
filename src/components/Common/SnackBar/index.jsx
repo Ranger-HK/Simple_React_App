@@ -31,7 +31,10 @@ class GDSESnackBar extends Component {
 
     handleButtonClose = (event) => {
         const { onClose } = this.props
-        onClose && onclose({ event })
+        onClose &&
+            onclose({
+                event,
+            })
     }
 
     renderChildren = (message, children) => {
@@ -70,4 +73,4 @@ class GDSESnackBar extends Component {
     }
 }
 
-export default GDSESnackBar
+export default GDSESnackBar;

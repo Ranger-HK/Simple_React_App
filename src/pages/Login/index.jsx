@@ -3,7 +3,8 @@ import { Button, Typography } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import { styleSheets } from "../Login/styles";
 import { withStyles } from "@mui/styles";
-import Alert from '@mui/material/Alert';
+import GDSESnackBar from "../../components/Common/SnackBar";
+
 
 
 class LoginPage extends Component {
@@ -15,7 +16,11 @@ class LoginPage extends Component {
             formData: {
                 user_name: '',
                 password: ''
-            }
+            },
+            //for snakBar props
+            open: false,
+            message: '',
+            severity: ''
         }
     }
 
@@ -28,11 +33,18 @@ class LoginPage extends Component {
         let formData = this.state.formData
         if (formData.user_name === this.state.userName && formData.password === this.state.password) {
             console.log("Credential Matched !")
-            //<Alert severity="success">Credential Matched !</Alert>
+            this.setState({
+                open: true,
+                message: 'Credential Matched !',
+                severity: 'success'
+            })
         } else {
             console.log("Credential Didn't Matched !")
-            //<Alert severity="error">Credential Didn't Matched !</Alert>
-
+            this.setState({
+                open: true,
+                message: 'Credential Not Matched !',
+                severity: 'error'
+            })
         }
     }
 
@@ -41,13 +53,11 @@ class LoginPage extends Component {
         return (
             <div className={classes.container} >
                 <div className={classes.container_sub} >
-
                     <div className={classes.container_title}>
                         <Typography variant="h3" gutterBottom>
                             Login
                         </Typography>
                     </div>
-
 
                     <div className={classes.container_field}>
                         <TextField
@@ -76,7 +86,7 @@ class LoginPage extends Component {
                             }}
 
                         />
-                    </div >
+                    </div >       
 
                     <div className={classes.container_button}>
                         <Button
@@ -90,7 +100,18 @@ class LoginPage extends Component {
 
                     </div>
 
-                    
+                    <div>
+                        <GDSESnackBar
+                            open={this.state.open}
+                            onClose={() => {
+                                this.setState({ open: false })
+                            }}
+                            message={this.state.message}
+                            autoHideDuration={3000}
+                            severity={this.state.severity}
+                            variant="filled"
+                        />
+                    </div>
                 </div>
             </div>
 
