@@ -2,7 +2,7 @@ export const styleSheet = {
     container: {
         display: 'flex',
         backgroundColor: 'gray',
-        flexDirection: 'column',
+        flexDirection: 'row',
         height: '100vh',
         width: '100vw'
     },
@@ -10,19 +10,20 @@ export const styleSheet = {
     title_container: {
 
         backgroundColor: 'blue',
-        height: '20%',
-        widht: '100%'
+        height: '100%',
+        width: '25%'
     },
 
     form_container: {
 
         backgroundColor: 'green',
-        height: '60%',
-        widht: '100%'
+        height: '100%',
+        width: '50%'
     },
 
     btn_container: {
-        backgroundColor: 'yellow', height: '20%',
-        widht: '100%'
+        backgroundColor: 'yellow', 
+        height: '100%',
+        width: '25%'
     }
 }
