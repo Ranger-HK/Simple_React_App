@@ -1,63 +1,56 @@
-import {Component} from "react";
-import {Button, Typography} from "@mui/material";
-import {styleSheets} from "../Countable/styles";
-import {withStyles} from "@mui/styles";
-import GDSEButton from "../../Common/Button";
+import { Component } from "react";
+import { Button, Typography } from "@mui/material";
+import { styleSheets } from "../Countable/styles";
+import { withStyles } from "@mui/styles";
 
 
 
-class Countable extends Component{
+class Countable extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            count:0
+        this.state = {
+            count: 0
         }
 
     }
 
-    incrementCount(){
+    incrementCount() {
         this.setState({
             count: this.state.count + 1
         })
     }
 
-    decrementCount(){
+    decrementCount() {
         this.setState({
             count: this.state.count - 1
         })
     }
 
-    resetCount(){
+    resetCount() {
         this.setState({
             count: this.state.count = 0
         })
     }
 
-    render(){
-        const {classes} = this.props
-        return(
+    render() {
+        const { classes } = this.props
+        return (
             <div className={classes.container} >
                 <div>
                     <Typography variant="h3" gutterBottom>
-                       Count : {this.state.count}
+                        Count : {this.state.count}
                     </Typography>
                 </div>
                 <div>
 
-                    {/* <Button variant="contained"
+                    <Button variant="contained"
                      onClick={() =>{
                          this.incrementCount();
                      }}
                             style={{backgroundColor:"Green"}}
-                    >Increase</Button> */}
+                    >Increase</Button>
 
-                    <GDSEButton
-                        label="Increase !"
-                        variant="contained"
-                        onClick={() =>{
-                            this.incrementCount();
-                        }}
-                    />
+                
 
                     <Button variant="contained"
                             onClick={() =>{
@@ -68,10 +61,10 @@ class Countable extends Component{
 
 
                     <Button variant="contained"
-                            onClick={() =>{
-                                this.resetCount();
-                            }}
-                            style={{marginLeft:"20px" ,backgroundColor:"Red"}}
+                        onClick={() => {
+                            this.resetCount();
+                        }}
+                        style={{ marginLeft: "20px", backgroundColor: "Red" }}
 
                     >Resets</Button>
                 </div>
