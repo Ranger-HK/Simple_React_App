@@ -3,26 +3,26 @@ import { Component } from 'react';
 import { Button } from "@mui/material";
 import not_found from '../../assets/img/not_found.jpg';
 import {Link} from 'react-router-dom';
-import { styleSheets } from '../Session/styles';
+//import { styleSheets } from '../Session/styles';
 
 
 
-// const stylesheet = () => ({
+const stylesheets = () => ({
 
-//     container: {
-//         display: 'flex',
-//         flexDirection: 'column',
-//         justifyContent: 'center',
-//         alignItems: 'center'
-//     },
+    container: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
 
-//     img_container: {
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         maxWidth: '10px'
-//     }
-// })
+    img_container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        maxWidth: '10px'
+    }
+})
 
 
 class NotFound extends Component {
@@ -50,4 +50,4 @@ class NotFound extends Component {
     }
 }
 
-export default withStyles(styleSheets)(NotFound);
+export default withStyles(stylesheets)(NotFound);
