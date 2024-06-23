@@ -2,7 +2,7 @@ export const styleSheet = {
     container: {
         display: 'flex',
         backgroundColor: 'gray',
-        flexDirection: 'row',
+        flexDirection: 'row', // row , row-reverse, column, colunm-reverse
         height: '100vh',
         width: '100vw'
     },
