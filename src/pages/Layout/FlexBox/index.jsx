@@ -13,7 +13,10 @@ class FlexBoxLayout extends Component {
         return (
             <div className={classes.container}>
                 <div className={classes.title_container}> </div>
-                <div className={classes.form_container}></div>
+                <div className={classes.form_container}>
+                    <div className={classes.left_form}></div>
+                    <div className={classes.right_form}></div>
+                </div>
                 <div className={classes.btn_container}></div>
             </div>
         )
