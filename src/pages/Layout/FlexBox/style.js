@@ -8,9 +8,12 @@ export const styleSheet = {
     },
 
     title_container: {
+        display: 'flex',
         backgroundColor: 'blue',
         height: '20%',
-        width: '100%'
+        width: '100%',
+        alignItems:'center',
+        justifyContent:'center'
     },
 
     form_container: {
