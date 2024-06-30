@@ -17,7 +17,7 @@ function App() {
       <Route path="login" element={<LoginPage />} />
       <Route path="flex" element={<FlexBoxLayout/>} />
       <Route path="grid" element={<GridBoxLayout/>} />
-      <Route path="*" element={<NotFound />} />
+      {/*<Route path="*" element={<NotFound />} />*/}
     </Routes>
   );
 }
