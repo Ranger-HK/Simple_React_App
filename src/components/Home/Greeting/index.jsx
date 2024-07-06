@@ -17,7 +17,7 @@ class Greeting extends Component{
             <div className={classes.container}>
                 <div>
                     <Typography variant="h3" gutterBottom>
-                        Hello Welcome {this.props.name}
+                        Hello Welcome ..! {this.props.name}
                     </Typography>
                </div>
 
